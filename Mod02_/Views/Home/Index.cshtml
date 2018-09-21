@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*Ctrl+K,D*@
+        <form action="/Home/Index" method="post">
+            ID : <input type="text" name="id" value="" />
+            <br />
+            Name : <input type="text" name="name" value="" />
+            <br />
+            <input type="submit" name="save" value="save" />
+        </form>
+
+        @ViewBag.id
+        @ViewBag.name
+    </div>
+</body>
+</html>

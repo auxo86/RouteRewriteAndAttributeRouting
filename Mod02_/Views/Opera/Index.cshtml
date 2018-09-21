@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Mod02_.Models.Opera>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @*<script>
+       var a = confirm("delete?");
+    </script>*@
+</head>
+<body>
+    <div>
+        <p>
+            @using (Html.BeginForm("filterdata", "opera", FormMethod.Get))
+            {
+                <input type="text" name="number" />
+                @*@Html.TextBox("number")*@
+                <input type="submit" />
+            }
+        </p>
+
+
+        <p>
+            @Html.ActionLink("Create", "Create")
+        </p>
+
+        @*<ul>
+            @foreach (var item in Model)
+            {
+                <li>@item.Title - @item.Composer - @item.Year</li>
+            }
+        </ul>*@
+        <table border="1">
+            <tr>
+                <th>@Html.DisplayNameFor(m => m.Title)</th>
+                <th>@Html.DisplayNameFor(m => m.Year)</th>
+                <th>@Html.DisplayNameFor(m => m.Composer)</th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(mi => item.Title)</td>
+                    <td>@Html.DisplayFor(mi => item.Year)</td>
+                    <td>@Html.DisplayFor(mi => item.Composer)</td>
+                    <td>
+                        @Html.ActionLink("Details", "Details",
+                       new { id = item.OperaID })
+                        @Html.ActionLink("Edit", "Edit",
+                       new { id = item.OperaID })
+                        @Html.ActionLink("Delete", "Delete",
+                       new { id = item.OperaID })
+                        @Html.ActionLink("Delete2", "Delete2",
+                       new { id = item.OperaID },
+                       new { onclick = "return confirm('確定要刪除此筆資料?');" })
+                    </td>
+                </tr>
+            }
+        </table>
+        @*<input type="text" name="name" value="123"
+        class="textBoxClass" />*@
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿@model Mod02_.Models.Opera
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*<ul>
+            <li>@Model.OperaID</li>
+            <li>@Model.Title</li>
+            <li>@Model.Year</li>
+            <li>@Model.Composer</li>
+        </ul>*@
+        @*http://210.60.102.106:5050*@
+        <ul>
+            <li>
+                @Html.DisplayNameFor(m => m.OperaID):
+                @Html.DisplayFor(m => m.OperaID)
+            </li>
+            <li>
+                @Html.DisplayNameFor(m => m.Title):
+                @Html.DisplayFor(m => m.Title)
+            </li>
+            <li>
+                @Html.DisplayNameFor(m => m.Year):
+                @Html.DisplayFor(m => m.Year)
+            </li>
+            <li>
+                @Html.DisplayNameFor(m => m.Composer):
+                @Html.DisplayFor(m => m.Composer)
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿@model Mod02_.Models.Opera
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                @Html.DisplayNameFor(m => m.Title) :
+                @Html.DisplayFor(m => m.Title)
+            </li>
+            <li>
+                @Html.DisplayNameFor(m => m.Year) :
+                @Html.DisplayFor(m => m.Year)
+            </li>
+            <li>
+                @Html.DisplayNameFor(m => m.Composer) :
+                @Html.DisplayFor(m => m.Composer)
+            </li>
+        </ul>
+        <p>
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+
+    </div>
+</body>
+</html>
