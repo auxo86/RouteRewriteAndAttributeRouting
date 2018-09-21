@@ -137,7 +137,10 @@ namespace Mod02_.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
-        [Route("opera/title/{title}")]
+        //加問號表示參數可以不用給。
+        [Route("opera/title/{title?}")]
+        //[Route("opera/title/{title}")]
+        //[Route("opera/title/{title=BBB}")]
         public ActionResult DetailsByTitle(string title)
         {
             Opera opera =
