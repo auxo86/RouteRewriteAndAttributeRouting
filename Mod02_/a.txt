@@ -190,3 +190,11 @@ OnActionExecuting controller:Opera, action:DetailsByTitle
 OnActionExecuted controller:Opera, action:DetailsByTitle
 OnResultExecuting controller:Opera, action:DetailsByTitle
 OnResultExecuted controller:Opera, action:DetailsByTitle
+OnActionExecuting controller:Opera, action:Details
+OnActionExecuted controller:Opera, action:Details
+OnResultExecuting controller:Opera, action:Details
+OnResultExecuted controller:Opera, action:Details
+OnActionExecuting controller:Opera, action:DetailsByTitle
+OnActionExecuted controller:Opera, action:DetailsByTitle
+OnResultExecuting controller:Opera, action:DetailsByTitle
+OnResultExecuted controller:Opera, action:DetailsByTitle
