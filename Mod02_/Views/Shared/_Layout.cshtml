@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @*下面這一行如果有加第二個參數表示這個區段不是每個View都要有。*@
+    @RenderSection("JSscripts", false)
+</head>
+<body>
+    <div>
+        @Html.MvcSiteMap().Menu()
+        @Html.MvcSiteMap().SiteMapPath()
+        @RenderBody()
+
+        <h1>Footer</h1>
+        <hr />
+    </div>
+
+</body>
+</html>

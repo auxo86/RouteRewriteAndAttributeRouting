@@ -1,20 +1,6 @@
 ﻿@model IEnumerable<Mod02_.Models.Opera>
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    @*<script>
-       var a = confirm("delete?");
-    </script>*@
-</head>
-<body>
     <div>
         <p>
             @using (Html.BeginForm("filterdata", "opera", FormMethod.Get))
@@ -66,5 +52,4 @@
         @*<input type="text" name="name" value="123"
         class="textBoxClass" />*@
     </div>
-</body>
-</html>
+

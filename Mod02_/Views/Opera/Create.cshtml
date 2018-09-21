@@ -1,51 +1,42 @@
 ﻿@model Mod02_.Models.Opera
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
+<div>
+    @using (Html.BeginForm())
+    {
+        <div>@Html.ValidationSummary()</div>
+        <fieldset>
+            <legend>Opera</legend>
+            <div>@Html.LabelFor(m => m.Title)</div>
+            <div>
+                @Html.EditorFor(m => m.Title)
+                @Html.ValidationMessageFor(m => m.Title, "*")
+            </div>
+            <div>@Html.LabelFor(m => m.Year)</div>
+            <div>
+                @Html.EditorFor(m => m.Year)
+                @Html.ValidationMessageFor(m => m.Year, "*")
+            </div>
+            <div>@Html.LabelFor(m => m.Composer)</div>
+            <div>
+                @Html.EditorFor(m => m.Composer)
+                @Html.ValidationMessageFor(m => m.Composer, "*")
+            </div>
+            <div>
+                <input type="submit" value="Create" />
+            </div>
+        </fieldset>
+    }
+    <p>
+        @Html.ActionLink("back to list", "Index")
+    </p>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-    <link href="~/Content/Site.css" rel="stylesheet" />
-</head>
-<body>
-    <div>
-        @using (Html.BeginForm())
-        {
-            <div>@Html.ValidationSummary()</div>
-            <fieldset>
-                <legend>Opera</legend>
-                <div>@Html.LabelFor(m => m.Title)</div>
-                <div>
-                    @Html.EditorFor(m => m.Title)
-                    @Html.ValidationMessageFor(m => m.Title, "*")
-                </div>
-                <div>@Html.LabelFor(m => m.Year)</div>
-                <div>
-                    @Html.EditorFor(m => m.Year)
-                    @Html.ValidationMessageFor(m => m.Year, "*")
-                </div>
-                <div>@Html.LabelFor(m => m.Composer)</div>
-                <div>
-                    @Html.EditorFor(m => m.Composer)
-                    @Html.ValidationMessageFor(m => m.Composer, "*")
-                </div>
-                <div>
-                    <input type="submit" value="Create" />
-                </div>
-            </fieldset>
-        }
-        <p>
-            @Html.ActionLink("back to list", "Index")
-        </p>
+</div>
 
-    </div>
+@section JSscripts
+{
     <script src="~/Scripts/jquery-1.8.0.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-</body>
-</html>
+}
+

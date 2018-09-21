@@ -1,20 +1,8 @@
-﻿
+﻿@*View都空了，因為都搬去LayoutPage了。*@
 @{
-    Layout = null;
+    //Layout就不寫在這裡了，他預設會去讀~/Views/_ViewStart.cshtml
+    ViewBag.Title = "Index_test";
 }
 
-<!DOCTYPE html>
+<h2>Index</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        <h1>Home Index</h1>
-        @Html.MvcSiteMap().Menu()
-        @Html.MvcSiteMap().SiteMapPath()
-    </div>
-</body>
-</html>
