@@ -137,6 +137,7 @@ namespace Mod02_.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        [Route("opera/title/{title}")]
         public ActionResult DetailsByTitle(string title)
         {
             Opera opera =
