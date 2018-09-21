@@ -151,7 +151,13 @@ namespace Mod02_.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.mycontroller =
+                RouteData.Values["controller"];
 
+            ViewBag.myaction =
+                RouteData.Values["action"];
+
+            ViewBag.mytitle = RouteData.Values["title"];
             return View("Details", opera);
         }
 
