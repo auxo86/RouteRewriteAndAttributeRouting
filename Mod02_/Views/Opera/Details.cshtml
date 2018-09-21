@@ -17,6 +17,8 @@
             <li>@ViewBag.mycontroller</li>
             <li>@ViewBag.myaction</li>
             <li>@ViewBag.mytitle</li>
+            @*直接從view拿routing資料。*@
+            <li>@ViewContext.RouteData.Values["controller"]</li>
         </ul>
         <ul>
             <li>
